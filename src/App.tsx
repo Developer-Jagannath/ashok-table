@@ -26,7 +26,7 @@ function App() {
       title: 'Image',
       dataIndex: 'image',
       key: 'image',
-      width: 80,
+      width: 100,
       render: (image: string) => (
         <div className="flex justify-center">
           {loading ? (
@@ -60,10 +60,10 @@ function App() {
       title: 'Category',
       dataIndex: 'category',
       key: 'category',
-      width: 100,
+      width: 120,
       render: (category: string) => (
         <div className="flex justify-center">
-          <span className="capitalize bg-gradient-to-r from-blue-500 to-purple-600 text-white px-2 py-1 md:px-3 rounded-full text-xs font-medium shadow-sm">
+          <span className="capitalize bg-gradient-to-r from-blue-500 to-purple-600 text-white px-2 py-1 md:px-3 rounded-full text-xs font-medium shadow-sm whitespace-nowrap">
             {category}
           </span>
         </div>
@@ -73,7 +73,7 @@ function App() {
       title: 'Price',
       dataIndex: 'price',
       key: 'price',
-      width: 80,
+      width: 100,
       render: (price: number | string) => (
         <div className="text-center">
           <span className="font-bold text-sm md:text-lg text-green-600">
@@ -86,7 +86,7 @@ function App() {
       title: 'Rating',
       dataIndex: 'rating',
       key: 'rating',
-      width: 100,
+      width: 120,
       render: (rating: { rate: number; count: number }) => (
         <div className="flex flex-col items-center space-y-1">
           <div className="flex items-center gap-1">
@@ -147,8 +147,8 @@ function App() {
         </div>
       ),
       category: (
-        <div className="flex justify-center w-10 md:w-20">
-          <Skeleton.Input active size="small" className="w-10 md:w-20" />
+        <div className="flex justify-center">
+          <Skeleton.Input active size="small" className="w-16 md:w-20" />
         </div>
       ),
       price: (
